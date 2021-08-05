@@ -1,6 +1,10 @@
 $color-primary:#FFFFFF;
 $color-secondary:#C9A96E;
 $color-tertiary:#171717;
+$color-text:#B1B1B1;
+$color-border:#E5E5E5;
+$color-para:#666666;
+$color-media: #F8F9FA;
 
 *{
     margin: 0;
@@ -9,9 +13,10 @@ $color-tertiary:#171717;
 }
 html{
 
-    font-size: 16px; 
+    font-family: 'PT Serif', serif;
+    font-size: 20px; 
     @media screen and ( max-width : 768px) {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -24,24 +29,159 @@ html{
 
 .title{
 
-    &__hero{
+    &--hero{
         color: $color-primary;
-        font-family: PT Serif;
         font-size: 2.3rem;
+    }
+    &__card{
+        
+        padding: 20px;
+
+        &--sub{
+            color: $color-secondary;
+            font-size: .7rem;
+            font-weight: normal;
+        }
+        &--primary{
+            font-size: 1rem;
+            text-align: center;
+            color: $color-tertiary;
+            font-weight: normal;
+        }
+        &--comment{
+            font-size: .7rem;
+            color: $color-text;
+            font-weight: normal;
+        }
+    }
+
+    &--card{
+        font-weight: normal;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        text-align: center;
     }
 }
 
 .text{
-    &__hero{
+
+    &--hero{
         color: $color-primary;
-        font-family: PT Serif;
-        font-weight: 400;
+        font-weight: normal;
     }
+    &--card{
+        color: $color-para;
+        font-size: .7rem;
+    }
+
+    &--media{
+        color:$color-text;
+        font-size: 12px;
+        
+    }
+    &--tag{
+        color: $color-text;
+        background-color: $color-media;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0 10px;
+    }
+   
 }
 
 .card{
-    padding: 20px 0px;
+
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+  
+
+    &__main{
+        box-shadow: 2px 2px 9px hsla(0, 0%, 67%, 0.726);
+        padding-bottom: 20px;
+    }
+
+    &__mid{
+        align-items: flex-start;   
+    }
+
+    &__content{
+       padding: 0 20px;
+    }
+
+    &__image{
+        width: 100%;
+    }
+
+    &__sidebar{
+
+        padding-bottom: 0;
+
+        &--header{
+           border: .5px solid $color-border;
+           width: 100%;
+           padding: 10px 20px;
+
+        }
+    }
+
+    &__table{
+        border-collapse: collapse;
+        width: 100%;
+        margin:0 20px;
+
+        td{
+            padding: 8px 0;
+            border-bottom: 1px solid $color-border;
+            text-align: center;
+        }
+    }
+
+    &__media{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        grid-gap: 10px;
+       
+
+        &--box{
+            display: flex;
+            flex-direction: column;
+            background-color: $color-media;
+            align-items: center;
+            padding: 10px 10px;
+        }
+        &--image{
+            width: 20px;
+        }
+    }
+
+    &__tags{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
 }
+
+.btn{
+
+    &--card{
+        text-align: center;
+        color: $color-secondary;
+        font-weight: normal;
+        border: none;
+        background-color: transparent;
+        width: 100%;
+        border-top: 1px solid $color-border;
+        padding: 20px 0px 10px 0px;
+        font-size: .8rem;
+
+    }
+}
+
 
 .header{
 
@@ -59,7 +199,7 @@ html{
 
         }
         &--active{
-            color: red;
+            color:$color-secondary;
         }
     }
 
@@ -91,8 +231,9 @@ html{
 
 .blog{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin-top: 30px;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 40px;
+    grid-column-gap: 40px;
 
     &__content{
         display: flex;
@@ -103,14 +244,30 @@ html{
         &--box1{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            
         }
-        &--box2{
-            padding: 20px 20px;
-        }
-
+       
         &--box3{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
         }
     }
+
+    &__sidebar{
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        &--feature{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px; 
+        }
+    }
+
+ 
+
+
 }
