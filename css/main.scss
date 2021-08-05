@@ -69,6 +69,12 @@ html{
         color: $color-primary;
         font-weight: normal;
     }
+
+    &--list{
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
     &--card{
         color: $color-para;
         font-size: .7rem;
@@ -205,6 +211,8 @@ html{
 
 }
 
+
+
 .hero{
     background: url(../image/backgrond.png);
     background-repeat: no-repeat;
@@ -229,42 +237,43 @@ html{
     }
 }
 
+
 .blog{
     display: grid;
     grid-template-columns: 3fr 1fr;
     margin-top: 40px;
     grid-column-gap: 40px;
 
-    &__content{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        row-gap: 20px;
-
-        &--box1{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 30px;
-            
-        }
-       
-        &--box3{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 30px;
-        }
-    }
-
-    &__sidebar{
-        display: flex;
-        flex-direction: column;
-        row-gap: 40px;
-
-        &--feature{
+        &__content{
             display: flex;
             flex-direction: column;
-            row-gap: 20px; 
+            width: 100%;
+            row-gap: 20px;
+
+            &--box1{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 30px;
+                
+            }
+        
+            &--box3{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 30px;
+            }
         }
+
+        &__sidebar{
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+
+            &--feature{
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px; 
+            }
     }
 
  

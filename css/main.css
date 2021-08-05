@@ -62,6 +62,11 @@ html {
   font-weight: normal;
 }
 
+.text--list {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
 .text--card {
   color: #666666;
   font-size: .7rem;
